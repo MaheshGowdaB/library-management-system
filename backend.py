@@ -11,6 +11,7 @@ def issue():
     conn=sqlite3.connect("books.db")
     cur=conn.cursor()
     #cur.execute("drop table issue")
+    #create table
     cur.execute("CREATE TABLE if NOT exists issue(id INTEGER NOT NULL ,title text,author text,year INTEGER,isbn INTEGER)")
     conn.commit()
     conn.close()
